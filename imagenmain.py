@@ -23,4 +23,13 @@ imagen_padd = padding.padding(imagen_gray)
 imagen_convolucion_padding = convolucion.convolucion(imagen_padd,B)
 cv2.imwrite("ImagenConvolucionPadding.jpg",imagen_convolucion_padding)
 
+filtro2 = [[1,1,1],[1,0,1],[1,1,1]]
+B2 = np.array(filtro2)
+imagen_convolucion = convolucion.convolucion(imagen_gray,B2)
+
+cv2.imwrite("ImagenConvolucion2.jpg",imagen_convolucion)
+
+imagen_padd = padding.padding(imagen_gray)
+imagen_convolucion_padding = convolucion.convolucion(imagen_padd,B)
+cv2.imwrite("ImagenConvolucionPadding2.jpg",imagen_convolucion_padding)
 
