@@ -13,9 +13,9 @@ cv2.imwrite("BlackWhite.jpg", imagen_black_white)
 filtro = [[3,4,2],[1,0,1],[2,3,1]]
 B = np.array(filtro)
 imagen_convolucion = convolucion.convolucion(imagen_gray,B)
-cv2.imwrite("ImagenConvolucion",imagen_convolucion)
+cv2.imwrite("ImagenConvolucion.jpg",imagen_convolucion)
 imagen_padd = padding.padding(imagen_gray)
 imagen_convolucion_padding = convolucion.convolucion(imagen_padd,B)
-cv2.imwrite("ImagenConvolucionPadding",imagen_convolucion_padding)
+cv2.imwrite("ImagenConvolucionPadding.jpg",imagen_convolucion_padding)
 
 
