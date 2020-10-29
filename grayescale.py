@@ -27,7 +27,7 @@ def escala(M):
 """
 Filtro = [[3,4,2],[1,0,2],[2,3,1]]
 imagen = cv2.imread("imagen.jpg")
-imagen_gray = escala(imagen)
+imagen_gray = grayescale.escala(imagen)
 cv2.imwrite("GrayScale.jpg", imagen_gray)
 valor = 127
 imagen_black_white = black_white(imagen_gray, valor)

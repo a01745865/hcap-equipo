@@ -5,6 +5,8 @@ Created on Thu Oct 29 14:44:34 2020
 
 @author: fergarcia
 """
+import numpy as np
+
 def black_white(M, valor):
     matriz_zeros = np.zeros((M.shape[0], M.shape[1]))
     for i in range(len(M)):
