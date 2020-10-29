@@ -7,26 +7,24 @@ Created on Thu Oct 29 13:57:37 2020
 """
 
 import cv2
+import numpy as np
 
 def escala(M):
-    copia = []
+    matriz_zeros = np.zeros((M.shape[0], M.shape[1]))
     for i in range(len(M)):
         suma = 0
         for a in range(len(M[i])):
             for b in M[i][a]:
                 suma += b
             promedio = suma/len(M[i][a])
-            copia.append(promedio)
-    return copia
+            matriz_zeros[i][a] = promedio 
+    return matriz_zeros
 
 imagen = cv2.imread("imagen.jpg")
 print(imagen.shape)
 print(imagen[0][0])
 
-Matriz = [[[1,2,3]],[[4,6,10]],[[10,15,5]]]
-
-print(escala(Matriz))
 
 image_gray = escala(imagen)
-
+cv2.imwrite("GrayScale.jpg", image_gray)
 print(image_gray.shape)
