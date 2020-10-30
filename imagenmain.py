@@ -30,6 +30,6 @@ imagen_convolucion2 = convolucion.convolucion(imagen_gray,B2)
 cv2.imwrite("ImagenConvolucion2.jpg",imagen_convolucion2)
 
 imagen_padd2 = padding.padding(imagen_gray)
-imagen_convolucion_padding2 = convolucion.convolucion(imagen_padd,B)
+imagen_convolucion_padding2 = convolucion.convolucion(imagen_padd,B2)
 cv2.imwrite("ImagenConvolucionPadding2.jpg",imagen_convolucion_padding2)
 
